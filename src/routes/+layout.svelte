@@ -62,7 +62,7 @@
 </script>
 
 <svelte:head>
-  <title>The Coding Initiative</title>
+  <title>Full Circle Therapy</title>
 </svelte:head>
 
 
