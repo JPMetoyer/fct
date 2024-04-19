@@ -1,0 +1,227 @@
+
+@use "$lib/scss/variables" as app;
+
+* {
+    padding: 0px; 
+    border: none; 
+    margin: 0px; 
+    box-sizing: border-box;
+
+    color: inherit; 
+    fill: inherit;
+    z-index: inherit;
+    stroke: inherit; 
+    stroke-width: inherit;
+
+    font-family: app.$typeface-body;
+    font-size: inherit;
+    font-weight: app.$weight-regular;
+    line-height: inherit;
+
+    
+}
+
+html {
+    font-size: 15px;
+    stroke-width: 1.0px;
+    line-height: 150%;
+    background-color: app.$color-background;
+}
+@media screen and (min-width: 840px) and (min-height: 680px)
+{
+    html 
+    {
+        font-size: 17px;
+    }
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+h1 {
+    color: app.$color-foreground;
+    font-size: 2rem;
+    font-weight: app.$weight-bold;
+    line-height: 120%;
+
+}
+
+h2 {
+    font-weight: app.$weight-bold;
+    color: app.$color-foreground;
+
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-weight: app.$weight-bold;
+    font-size: 1.2rem;
+    color: app.$color-foreground;
+
+}
+
+h4 {
+    font-weight: app.$weight-semibold;
+    font-size: 1.1rem;
+    color: app.$color-foreground;
+
+}
+
+p, input {
+    font-size: 1rem;
+    font-weight: app.$weight-regular;
+    color: app.$color-foreground;
+
+}
+
+
+
+
+button, a.button {
+    padding: 0.3rem 1rem; 
+    border-radius: 2rem; 
+    background-color: app.$color-brand;
+    color: #EBEFF2;
+    width: max-content;
+   
+   
+  }
+  
+ 
+
+
+
+button.secondary, a.button.secondary {
+    background-color: rgba(78, 95, 228, 0.16);
+    color: app.$color-brand;
+    transition: box-shadow 220ms ease-in-out;
+
+    &:disabled {
+        border: none;
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 3px 0px;
+
+    }
+}
+
+button.tertiary, a.button.tertiary {
+    background-color: transparent;
+    border: 0.8px solid app.$color-brand;
+    color: app.$color-brand;       
+    transition: box-shadow 220ms ease-in-out;
+
+    &:disabled {
+        border: none;
+        color: app.$color-midground;
+        cursor: not-allowed;
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 3px 0px;
+
+    }
+         
+
+}
+
+button, a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button:disabled {
+    background-color: app.$color-shade;
+    color: app.$color-midground;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+}
+
+a {
+    color: app.$color-foreground;
+}
+
+* > img {
+    max-width: 100%; 
+    max-height: 100%;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+.icon {
+    position: relative;
+
+    > svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+
+.truncated {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+div.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a { color: app.$color-brand; }
+}
+
+div.empty > div.thumbnail {
+    
+    height: 15rem;
+
+    display: flex;
+    justify-content: center;
+
+
+    @media screen and (max-width: 640px) {
+        height: 10rem;
+    }
+    
+}
+
+*.drop-shadow {
+    background-color: app.$color-background;
+
+    transition-property: box-shadow;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in;
+
+    &:hover, &.show {
+        border: 1px dashed transparent;
+        box-shadow: 0 0 1.5rem #282a3614;
+    }
+}
+
+
+div.chip {
+    fill: transparent;
+    stroke: app.$color-foreground;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+section > h3 {
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: start;
+}
+
