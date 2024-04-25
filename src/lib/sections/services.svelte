@@ -83,7 +83,7 @@
             <div class="content">
                 <h1 style="line-height: 100%;">School Services</h1>
                 <p>Our specialized school services offer tailored support and guidance to help students thrive both academically and emotionally, ensuring a holistic approach to education and mental well-being.</p>
-                <a href="https://secure.helloalma.com/providers/deandre-dyer/"  target="_blank" class="button">School Services</a>
+                <a href="tel:346-386-7138"  target="_blank" class="button">Call Now</a>
             </div>
         </div>
 
