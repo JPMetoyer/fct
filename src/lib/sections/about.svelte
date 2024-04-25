@@ -7,7 +7,7 @@
     </div>
     <div id="content">
       <h2>Empowering Personal Growth Through Compassionate Therapy</h2>
-      <p>As a dedicated clinitian, Deandre Dyer LCSW brings a rich tapestry of experience from working with kids in schools to supporting adults with trauma. A proud alumnus of Texas State University and the University of Texas at Arlington, Deandre is well-equipped to connect with and support clients across all stages of life. Outside the office, he finds joy in fishing and making memories with his beloved puppies.      </p>
+      <p>As a dedicated clinician, Deandre Dyer LCSW brings a rich tapestry of experience from working with kids in schools to supporting adults with trauma. A proud alumnus of Texas State University and the University of Texas at Arlington, Deandre is well-equipped to connect with and support clients across all stages of life. Outside the office, he finds joy in fishing and making memories with his beloved puppies.      </p>
       <div class="button-wrapper">
         <a href="https://secure.helloalma.com/providers/deandre-dyer/"  target="_blank">More About Us</a>
       </div>
