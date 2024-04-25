@@ -116,7 +116,10 @@
             <h1>Your Triump <span>Tomorrow</span></h1>
             <p>
 
-                Counseling, Trauma Services, Consulting, and School Services 
+                Counseling & Trauma Services 
+                <br>
+                
+                Consulting & School Services 
             </p>
             <a href="https://secure.helloalma.com/providers/deandre-dyer/"  target="_blank" class="button"> Book an appointment</a>
         </div>
