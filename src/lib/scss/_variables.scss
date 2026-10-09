@@ -1,44 +1,47 @@
-
-
-
-
-
-
-$max-width: 1480px;
-
+$max-width: 1180px;
 
 // Font Weights
-$weight-light: 200; 
-$weight-regular: 300; 
-$weight-semibold: 400;
-$weight-bold: 500; 
-$weight-black: 700; 
+$weight-light: 300;
+$weight-regular: 400;
+$weight-semibold: 500;
+$weight-bold: 600;
+$weight-black: 700;
 
 // Colors
 // Semantic
-$color-foreground: #2F2F2F; 
-$color-tint: #2E576B; 
-$color-midground: #69838C; 
-$color-shade: #E1E1E1; 
-$color-background: #FFFFFF; 
-$color-elevate: #FAFAFC;
+$color-foreground: #14263A;
+$color-tint: #0F3D66;
+$color-midground: #4E6275;
+$color-shade: #E3EAF0;
+$color-background: #FFFFFF;
+$color-elevate: #F4F8FA;
 
-// Brand
-$color-brand: #2BD84E; 
-$color-info: #7bfe95;
-$color-error: #FF5E6E; 
-$color-gold: #FF8800; 
-$color-success: #2BD84E;
+// Brand (taken from the Full Circle Therapy logo)
+$color-brand: #1F75BD;
+$color-brand-deep: #0F3D66;
+$color-brand-soft: #E8F1F9;
+$color-accent: #5FE374;
+$color-accent-deep: #1E9A3A;
+$color-accent-soft: #E9FBEC;
+$color-info: #1F75BD;
+$color-error: #FF5E6E;
+$color-gold: #E8890C;
+$color-success: #1E9A3A;
 
+// Shape
+$radius-sm: 0.75rem;
+$radius-md: 1.25rem;
+$radius-lg: 2rem;
+$shadow-soft: 0 1px 2px rgba(20, 38, 58, 0.04), 0 8px 24px rgba(20, 38, 58, 0.06);
+$shadow-lift: 0 2px 4px rgba(20, 38, 58, 0.05), 0 18px 40px rgba(20, 38, 58, 0.10);
 
 // Typefaces
 $typeface-body:
     "Inter",
-    "Mulish",
+    system-ui,
     sans-serif;
 
 $typeface-heading:
-    "Nanum Myeongjo",
+    "Fraunces",
+    Georgia,
     serif;
-
-

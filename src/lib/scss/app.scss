@@ -1,227 +1,174 @@
-
 @use "$lib/scss/variables" as app;
 
-* {
-    padding: 0px; 
-    border: none; 
-    margin: 0px; 
+*, *::before, *::after {
+    padding: 0;
+    border: none;
+    margin: 0;
     box-sizing: border-box;
-
-    color: inherit; 
-    fill: inherit;
-    z-index: inherit;
-    stroke: inherit; 
-    stroke-width: inherit;
-
-    font-family: app.$typeface-body;
-    font-size: inherit;
-    font-weight: app.$weight-regular;
-    line-height: inherit;
-
-    
 }
 
 html {
-    font-size: 15px;
-    stroke-width: 1.0px;
-    line-height: 150%;
+    font-size: 16px;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
     background-color: app.$color-background;
-}
-@media screen and (min-width: 840px) and (min-height: 680px)
-{
-    html 
-    {
-        font-size: 17px;
-    }
+    -webkit-text-size-adjust: 100%;
 }
 
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 1.5rem;
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; animation: none !important; }
 }
 
-h1 {
+body {
+    font-family: app.$typeface-body;
+    font-weight: app.$weight-regular;
     color: app.$color-foreground;
-    font-size: 2rem;
-    font-weight: app.$weight-bold;
-    line-height: 120%;
-
+    background-color: app.$color-background;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
-h2 {
-    font-weight: app.$weight-bold;
+h1, h2, h3 {
+    font-family: app.$typeface-heading;
+    font-weight: app.$weight-semibold;
     color: app.$color-foreground;
-
-    font-size: 1.5rem;
-}
-
-h3 {
-    font-weight: app.$weight-bold;
-    font-size: 1.2rem;
-    color: app.$color-foreground;
-
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
 }
 
 h4 {
-    font-weight: app.$weight-semibold;
-    font-size: 1.1rem;
+    font-weight: app.$weight-bold;
     color: app.$color-foreground;
-
 }
 
-p, input {
-    font-size: 1rem;
-    font-weight: app.$weight-regular;
-    color: app.$color-foreground;
-
-}
-
-
-
-
-button, a.button {
-    padding: 0.3rem 1rem; 
-    border-radius: 2rem; 
-    background-color: app.$color-brand;
-    color: #EBEFF2;
-    width: max-content;
-   
-   
-  }
-  
- 
-
-
-
-button.secondary, a.button.secondary {
-    background-color: rgba(78, 95, 228, 0.16);
-    color: app.$color-brand;
-    transition: box-shadow 220ms ease-in-out;
-
-    &:disabled {
-        border: none;
-    }
-
-    &:hover {
-        box-shadow: 0px 0px 3px 0px;
-
-    }
-}
-
-button.tertiary, a.button.tertiary {
-    background-color: transparent;
-    border: 0.8px solid app.$color-brand;
-    color: app.$color-brand;       
-    transition: box-shadow 220ms ease-in-out;
-
-    &:disabled {
-        border: none;
-        color: app.$color-midground;
-        cursor: not-allowed;
-    }
-
-    &:hover {
-        box-shadow: 0px 0px 3px 0px;
-
-    }
-         
-
-}
-
-button, a {
-    cursor: pointer;
-    text-decoration: none;
-}
-
-button:disabled {
-    background-color: app.$color-shade;
+p {
     color: app.$color-midground;
-    cursor: not-allowed !important;
-    pointer-events: none !important;
+    text-wrap: pretty;
 }
 
 a {
-    color: app.$color-foreground;
+    color: inherit;
+    text-decoration: none;
 }
 
-* > img {
-    max-width: 100%; 
-    max-height: 100%;
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
-svg {
+button {
+    font: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+}
+
+:focus-visible {
+    outline: 3px solid app.$color-accent;
+    outline-offset: 3px;
+    border-radius: 0.5rem;
+}
+
+// Layout helpers
+.container {
     width: 100%;
-    height: 100%;
-}
+    max-width: app.$max-width;
+    margin: 0 auto;
+    padding: 0 1.5rem;
 
-.icon {
-    position: relative;
-
-    > svg {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
+    @media (max-width: 520px) {
+        padding: 0 1rem;
     }
 }
 
-.truncated {
-    overflow: hidden;
-    white-space: nowrap;
+.section {
+    padding: 6.5rem 0;
+
+    @media (max-width: 720px) {
+        padding: 4.5rem 0;
+    }
 }
 
-div.empty {
-    display: flex;
-    flex-direction: column;
+.section-head {
+    max-width: 40rem;
+    margin: 0 auto 3.5rem;
+    text-align: center;
+
+    h2 {
+        font-size: clamp(2rem, 4vw, 2.75rem);
+    }
+}
+
+.eyebrow {
+    display: inline-flex;
     align-items: center;
-
-    a { color: app.$color-brand; }
-}
-
-div.empty > div.thumbnail {
-    
-    height: 15rem;
-
-    display: flex;
-    justify-content: center;
-
-
-    @media screen and (max-width: 640px) {
-        height: 10rem;
-    }
-    
-}
-
-*.drop-shadow {
-    background-color: app.$color-background;
-
-    transition-property: box-shadow;
-    transition-duration: 150ms;
-    transition-timing-function: ease-in;
-
-    &:hover, &.show {
-        border: 1px dashed transparent;
-        box-shadow: 0 0 1.5rem #282a3614;
-    }
-}
-
-
-div.chip {
-    fill: transparent;
-    stroke: app.$color-foreground;
-
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
     gap: 0.5rem;
+    margin-bottom: 0.9rem;
+
+    font-family: app.$typeface-body;
+    font-size: 0.8rem;
+    font-weight: app.$weight-bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: app.$color-brand;
+
+    &::before {
+        content: "";
+        width: 1.5rem;
+        height: 2px;
+        border-radius: 2px;
+        background-color: app.$color-accent;
+    }
 }
 
-section > h3 {
-    width: 100%;
-    margin-bottom: 1rem;
-    text-align: start;
-}
+// Buttons
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: max-content;
+    max-width: 100%;
 
+    padding: 0.8rem 1.4rem;
+    border-radius: 999px;
+    border: 1.5px solid transparent;
+
+    font-family: app.$typeface-body;
+    font-size: 0.95rem;
+    font-weight: app.$weight-bold;
+    line-height: 1.2;
+    text-align: center;
+
+    background-color: app.$color-brand;
+    color: #FFFFFF;
+
+    transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+
+    &:hover {
+        background-color: app.$color-brand-deep;
+        transform: translateY(-1px);
+        box-shadow: 0 8px 20px rgba(31, 117, 189, 0.25);
+    }
+
+    &.outline {
+        background-color: transparent;
+        border-color: rgba(31, 117, 189, 0.35);
+        color: app.$color-brand;
+
+        &:hover {
+            background-color: app.$color-brand-soft;
+            border-color: app.$color-brand;
+            box-shadow: none;
+        }
+    }
+
+    &.small {
+        padding: 0.6rem 1.1rem;
+        font-size: 0.9rem;
+    }
+}

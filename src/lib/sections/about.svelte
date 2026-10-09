@@ -1,106 +1,87 @@
+<section id="about" class="section">
+    <div class="container grid">
+        <div class="panel">
+            <img src="/icons/fctherapy.jpg" alt="Full Circle Therapy PLLC logo" width="1685" height="1180">
+        </div>
 
-<main>
-<h1 style="align-self: center;">About Us</h1>
-<section id="about">
-    <div id="graphic">
-      <img src="/images/deandre.png" alt="Deandre">
+        <div class="content">
+            <span class="eyebrow">About Us</span>
+            <h2>Empowering Personal Growth Through Compassionate Therapy</h2>
+            <p>As a dedicated clinician, Deandre Dyer LCSW brings a rich tapestry of experience from working with kids in schools to supporting adults with trauma. A proud alumnus of Texas State University and the University of Texas at Arlington, Deandre is well-equipped to connect with and support clients across all stages of life. Outside the office, he finds joy in fishing and making memories with his beloved puppies.</p>
+
+            <ul class="tags" aria-label="Specialties">
+                <li>EMDR</li>
+                <li>Play Therapy</li>
+                <li>TF-CBT</li>
+            </ul>
+
+            <a href="https://secure.helloalma.com/providers/deandre-dyer/" target="_blank" rel="noopener" class="button outline">More About Us</a>
+        </div>
     </div>
-    <div id="content">
-      <h2>Empowering Personal Growth Through Compassionate Therapy</h2>
-      <p>As a dedicated clinician, Deandre Dyer LCSW brings a rich tapestry of experience from working with kids in schools to supporting adults with trauma. A proud alumnus of Texas State University and the University of Texas at Arlington, Deandre is well-equipped to connect with and support clients across all stages of life. Outside the office, he finds joy in fishing and making memories with his beloved puppies.      </p>
-      <div class="button-wrapper">
-        <a href="https://secure.helloalma.com/providers/deandre-dyer/"  target="_blank">More About Us</a>
-      </div>
-    </div>
-  </section>
+</section>
 
-</main>
+<style lang="scss">
+    @use "$lib/scss/variables" as app;
 
-    
-  <style>
-
-    main {
-        padding-top: 10rem;
-        
-    }
     #about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 1240px;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 3rem;
-    align-items: center;
-    padding: 1rem;
-  }
-  
-  #content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  #content h2 {
-    font-size: 2rem;
-    line-height: 2rem;
-    color: #2A2A2A;
-    margin-bottom: 1rem;
-  }
-  
-  #content p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #4A4A4A;
-    margin-bottom: 1.5rem;
-  }
-  
-  
-  #content a {
-    border-width: 10px;
-    color: #06C270;
-    background-color: transparent;
-    border-radius: 12px;
-    border: 0.8px solid #06C270;
-    padding: 0.3rem 1rem;
-    display: inline-block;
-    text-decoration: none;
-    transition: all ease-in-out 80ms;
-  }
-  
-  #content a:hover {
-    color: white;
-    background-color: #06C270;
-  }
-  
-  #graphic img {
-    width: 100%;
-    height: auto;
-    border-radius: 1.3rem;
-    object-fit: cover;
-  }
-  
-  @media (max-width: 960px) {
-    #about {
-      grid-template-columns: 1fr;
-      padding: 2rem 1rem;
+        background-color: app.$color-elevate;
     }
-  
-    #content h2 {
-      font-size: 2rem;
+
+    .grid {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        align-items: center;
+        gap: 5rem;
+
+        @media (max-width: 900px) {
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
     }
-  
-    #content p {
-      font-size: 1rem;
+
+    .panel {
+        position: relative;
+        overflow: hidden;
+        border-radius: app.$radius-lg;
+        background-color: #1F75BD;
+        box-shadow: app.$shadow-lift;
+
+        img {
+            width: 100%;
+            aspect-ratio: 1685 / 1180;
+            object-fit: cover;
+        }
+
+        @media (max-width: 900px) {
+            max-width: 32rem;
+        }
     }
-  
-    #content a {
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
+
+    h2 {
+        font-size: clamp(1.9rem, 3.6vw, 2.6rem);
+        margin-bottom: 1.25rem;
     }
-  
-    #graphic {
-      order: -1;
+
+    p {
+        font-size: 1.075rem;
+        line-height: 1.75;
     }
-  }
-  
-  </style>
+
+    .tags {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 1.75rem 0 2rem;
+
+        li {
+            padding: 0.35rem 0.9rem;
+            border-radius: 999px;
+            background-color: app.$color-background;
+            border: 1px solid app.$color-shade;
+            font-size: 0.85rem;
+            font-weight: app.$weight-semibold;
+            color: app.$color-brand-deep;
+        }
+    }
+</style>
